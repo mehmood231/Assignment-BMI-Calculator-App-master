@@ -7,46 +7,23 @@ import 'MainPage.dart';
 
 void main() => runApp(SplashScreen());
 
-class SplashScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MySplashScreen(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
+MaterialApp(
+  title: title,
+  theme: ThemeData(
+    // Define the default brightness and colors.
+    brightness: Brightness.dark,
+    primaryColor: Colors.lightBlue[800],
+    accentColor: Colors.cyan[600],
 
-class MySplashScreen extends StatefulWidget {
-  @override
-  _MySplashScreenState createState() => _MySplashScreenState();
-}
+    // Define the default font family.
+    fontFamily: 'Georgia',
 
-class _MySplashScreenState extends State<MySplashScreen> {
-
-  @override
-  void initState() {
-    super.initState();
-
-    Timer(Duration(seconds: 5), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => BmiCalculatur())));
-
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.indigo,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Image.asset('images/bmi1.png', height: 250.0, width: 250,),
-
-          SizedBox( height: 30.0),
-
-          SpinKitRipple(color: Colors.red, size: 150.0, borderWidth: 10.0,),
-        ],
-      ),
-    );
-  }
-}
+    // Define the default TextTheme. Use this to specify the default
+    // text styling for headlines, titles, bodies of text, and more.
+    textTheme: TextTheme(
+      headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
+      headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
+      bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
+    ),
+  )
+);
