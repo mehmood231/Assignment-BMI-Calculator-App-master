@@ -17,19 +17,13 @@ class SplashScreen extends StatelessWidget {
   }
 }
 
-class MySplashScreen extends StatefulWidget {
-  @override
-  _MySplashScreenState createState() => _MySplashScreenState();
-}
-
 class _MySplashScreenState extends State<MySplashScreen> {
 
   @override
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 5), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => BmiCalculatur())));
-
+    Timer(Duration(seconds: 5), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => BmiCalculatur())))
   }
 FloatingActionButton.extended(
   backgroundColor: const Color(0xff03dac6),
