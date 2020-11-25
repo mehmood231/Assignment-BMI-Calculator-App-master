@@ -25,14 +25,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
 
     Timer(Duration(seconds: 3), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => BmiCalculatur())))
   }
-FloatingActionButton.extended(
-  backgroundColor: const Color(0xff03dac6),
-  foregroundColor: Colors.blue,
-  onPressed: () {
-    // Respond to button press
-  },
-  icon: Icon(Icons.add),
-  label: Text('EXTENDED'),
+
 )
   @override
   void initState() {
