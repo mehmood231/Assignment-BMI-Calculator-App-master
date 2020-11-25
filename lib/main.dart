@@ -23,9 +23,19 @@ class _MySplashScreenState extends State<MySplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 3), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => BmiCalculatur())))
+    Timer(Duration(seconds: 5), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => BmiCalculatur())))
   }
-
+  @override
+  void initState() {
+    super.initState();
+    _bordersAnimation = BorderRadiusTween( //create BorderRadiusTween
+      begin: BorderRadius.circular(8.0),
+      end: BorderRadius.circular(50.0),
+    ).animate(CurvedAnimation(
+      parent: widget.submitAnimationController,
+      curve: Interval(0.0, 0.07), //specify interval from 0 to 7%
+    ));
+  }
 )
   @override
   void initState() {
