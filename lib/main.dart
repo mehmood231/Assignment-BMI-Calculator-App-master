@@ -48,9 +48,8 @@ class _MySplashScreenState extends State<MySplashScreen> {
         children: <Widget>[
           Image.asset('images/bmi1.png', height: 250.0, width: 250,),
 
-          SizedBox( height: 30.0),
-
-          SpinKitRipple(color: Colors.black, size: 150.0, borderWidth: 10.0,),
+          SizedBox( height: 25.0),
+          SpinKitRipple(color: Colors.black, size: 150.0, borderWidth: 8.0,),
         ],
       ),
     );
