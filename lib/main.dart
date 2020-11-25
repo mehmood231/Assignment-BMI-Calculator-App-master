@@ -23,7 +23,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 5), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => BmiCalculatur())))
+    Timer(Duration(seconds: 3), ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => BmiCalculatur())))
   }
 FloatingActionButton.extended(
   backgroundColor: const Color(0xff03dac6),
